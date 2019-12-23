@@ -1,0 +1,67 @@
+/* pages/pmjg/pmjg.wxss */
+.zg_searchpm{background:#f5f9fc url(https://www.offcn.com/zg/gwy_xcx/zg_bg20.jpg) no-repeat center -86rpx;width: 100%;background-size: 100% 773rpx;padding-bottom: 90rpx}
+.zg_morexx{padding-top: 44rpx;text-align: center;}
+.zg_morexximg{width: 93rpx!important;height: 93rpx!important;border-radius: 50%;border: 5rpx solid #7a6cfa}
+.userinfo-nickname{text-align: center;display: block;font:26rpx/30rpx "Microsoft yahei";color: #fff;margin-top: 13rpx;}
+
+.zg_searchpmtab{
+  border-radius: 20rpx;
+  background-color: rgb(255, 255, 255);
+  width: 662rpx;
+  margin: 50rpx auto 0;
+  padding: 0 20rpx;
+}
+.table{
+  width: 100%;
+}
+.tr{
+  width:100%;
+  display: flex;
+  justify-content: space-between;
+}
+.th,.td{
+  text-align: center;
+  width: 100%;
+}
+.th1,.td1{
+  width: 18.7%;
+}
+.th2,.td2{
+  width: 40.8%;
+}
+.th3,.td3{
+  width: 19.6%;
+}
+.th4,.td4{
+  width: 20.9%;
+}
+.th{
+  font:26rpx/80rpx "Microsoft yahei";
+  color: #4a79e6;
+  border-bottom: 1rpx solid #4a79e6;
+}
+.td{
+  font:26rpx/80rpx "Microsoft yahei";
+  color: #333333;
+  border-bottom: 1rpx dashed #c3c6c7;
+}
+.table .tr:last-child .td{border-bottom: none}
+.table .tr.on .td{font-weight: bold}
+.zg_pmjgview{display: flex;flex-wrap: nowrap;align-items: center;}
+.zg_pmjgview>view{flex-grow: 1;text-align: center;}
+.zg_pmjgviewv1{font:40rpx/59rpx "Microsoft yahei";color: #fff;}
+.zg_pmjgviewon{font:bold 55rpx/59rpx "Microsoft yahei";color: #fff;}
+.zg_pmjgviewv2{font:26rpx/30rpx "Microsoft yahei";color: #fff;margin-top: 20rpx;}
+.zg_pmjgview{padding-top: 38rpx;}
+.zg_pmjgview1{
+  border-radius: 20rpx;
+  background-color: rgb(255, 255, 255);
+  width: 702rpx;
+  margin: 36rpx auto 0;
+  padding: 30rpx 0;
+  display: flex;flex-wrap: nowrap;align-items: center;
+}
+.zg_pmjgview1>view{flex-grow: 1;}
+.zg_pmjgview1fl{background:url(https://www.offcn.com/zg/gwy_xcx/zg_bg22.jpg) no-repeat 104rpx 50%;background-size: 28rpx 28rpx;font:26rpx/40rpx "Microsoft yahei";color: #333333;padding-left: 150rpx}
+.zg_pmjgview1fr{background:url(https://www.offcn.com/zg/gwy_xcx/zg_bg23.jpg) no-repeat 109rpx 50%;background-size: 29rpx 30rpx;font:26rpx/40rpx "Microsoft yahei";color: #333333;padding-left: 157rpx;border-left: 1rpx solid #e6e6e6}
+.zg_pmjgview1fr button{background: none;font:26rpx/40rpx "Microsoft yahei";color: #333333;padding: 0;margin-left: 0;min-height: auto;text-align: left;width: auto}

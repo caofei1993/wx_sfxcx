@@ -1,0 +1,120 @@
+/**index.wxss**/
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+
+
+
+
+
+
+.zg_banner{background:#f5f9fc url(https://www.offcn.com/zg/gwy_xcx/zg_banner.jpg) no-repeat center top;width: 100%;background-size: 100% 467rpx;padding-bottom: 139rpx}
+.zg_title{font:bold 52rpx/56rpx "Microsoft yahei";color: #fff;text-align: center;padding-top: 76rpx}
+.zg_tit{font:30rpx/34rpx "Microsoft yahei";color: #fff;text-align: center;padding-top:24rpx}
+.zg_tit text{color: #fcff00}
+.zg_form1{border-radius: 20rpx;width: 710rpx;background: #fff;margin: 52rpx auto 0;padding-bottom: 50rpx}
+.navbg{width: 456rpx;margin: 0 auto;padding-top: 20rpx;height: 69rpx}
+.normal{
+ height: 66rpx;
+ line-height: 66rpx;
+ font-size: 26rpx;
+ font-family: "Microsoft yahei";
+ color: #555;
+}
+.select{ 
+ height: 66rpx;
+ line-height: 66rpx;
+ font-size: 26rpx;
+ font-family: "Microsoft yahei";
+ color: #4d82fa;
+ border-bottom: 3rpx solid #4d82fa;
+}
+.zg_formxxv{border-width: 1rpx;border-color: rgb(231, 231, 231);border-style: solid;border-radius: 40rpx;width: 559rpx; height: 83rpx;margin: 30rpx auto 0;}
+.zg_formxxvi{float: right;display: block;margin-top: 16rpx;margin-right: 30rpx}
+.list-msg2{position: absolute;left: 0;top:0;display: block;width: 527rpx;height: 83rpx;padding-left: 32rpx;}
+.list-msg2 text{display: block;width: 100%;height: 100%;line-height: 83rpx;
+ font-size: 26rpx; font-family: "Microsoft yahei"; color: #333333;}
+.zg_formxxv{position: relative;} 
+.select_box {
+    background-color: #eee;    
+    width: 100%;
+    position: absolute;
+    top: 83rpx;
+    left: 0;
+    z-index: 1;
+    overflow: auto;
+    animation: myfirst 0.5s;
+    height: 180rpx;
+}
+ 
+@keyframes myfirst {
+    from {
+        height: 0rpx;
+    }
+ 
+    to {
+        height: 180rpx;
+    }
+}
+ 
+.select_one {
+    height: 60rpx;
+    line-height: 60rpx;
+    border-bottom: 1px solid #ccc;
+    padding: 0 10rpx
+}
+.zg_form2{position: relative;z-index: 5}
+.zg_formxlv{border-width: 1rpx;border-color: rgb(231, 231, 231);border-style: solid;border-radius: 40rpx;width: 527rpx; height: 83rpx;margin: 30rpx auto 0;padding-left: 32rpx;position: relative}
+.zg_formxlv input{width: 60%;height: 100%;line-height: 83rpx;
+ font-size: 26rpx; font-family: "Microsoft yahei"; color: #333333;}
+.codeBtn{position: absolute;right: 0;top:0;height: 83rpx;font:28rpx/83rpx "Microsoft yahei";color: #999999;width: 200rpx!important;padding: 0;border-radius: 40rpx;background: none;z-index: 2}
+.zg_cx{
+  border-radius: 40rpx;
+  background-image: -moz-linear-gradient( 180deg, rgb(156,195,255) 0%, rgb(93,79,249) 88%);
+  background-image: -webkit-linear-gradient( 180deg, rgb(156,195,255) 0%, rgb(93,79,249) 88%);
+  background-image: -ms-linear-gradient( 180deg, rgb(156,195,255) 0%, rgb(93,79,249) 88%);
+  width: 559rpx!important;
+  height: 88rpx!important;
+  padding: 0;
+  display: block;
+  font:bold 30rpx/88rpx "Microsoft yahei";
+  color: #fff;
+  margin-top: 37rpx;
+}
+.zg_formxlvts{background:url(https://www.offcn.com/zg/gwy_xcx/zg_bg1.png) no-repeat center top;width: 527rpx;height: 72rpx;position: absolute;left: 0;top:-72rpx;font:28rpx/66rpx "Microsoft yahei";color: #fefefe;padding-left: 32rpx;background-size: 100% 100%;display: none}
+
+.zg_pmtc{background:rgba(0, 0, 0, 0.5);position: fixed;left: 0;top:0;width: 100%;height: 100%;z-index: 5;}
+.zg_pmtc1{border-radius: 14rpx;background-color: rgb(255, 255, 255);width: 600rpx;height: 432rpx;position: absolute;left: 50%;top:50%;margin-left: -300rpx;margin-top: -400rpx;}
+.zg_pmtc1tit{font:34rpx/38rpx "Microsoft yahei";color: #333333;text-align: center;padding-top: 66rpx;}
+.zg_pmtc1p{font:26rpx/44rpx "Microsoft yahei";color: #666;text-align: center;padding-top:29rpx;display: block}
+.zg_pmtc1pm{
+   background:url(https://www.offcn.com/zg/gwy_xcx/zg_bg6.jpg) no-repeat center top;background-size: 342rpx 112rpx;
+   width: 342rpx;
+   height: 112rpx;
+   font:32rpx/112rpx "Microsoft yahei";
+   color: #fff;
+   text-align: center;
+   margin: 46rpx auto 0;
+}
+.zg_pmtcclose{width: 64rpx;height: 64rpx;position: absolute;left: 50%;margin-left: -32rpx;bottom:-104rpx;}
+.zg_pmtcclose image{width: 64rpx;height: 64rpx;}
+
+
+

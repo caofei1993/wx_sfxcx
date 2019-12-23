@@ -1,0 +1,35 @@
+/* pages/more/more.wxss */
+
+.zg_more{background:#f5f9fc url(https://www.offcn.com/zg/gwy_xcx/zg_bg8.jpg) no-repeat center top;width: 100%;background-size: 100% 743rpx;padding-bottom: 200rpx}
+.zg_morexx{padding-top: 78rpx;text-align: center;}
+.zg_morexximg{width: 93rpx!important;height: 93rpx!important;border-radius: 50%;border: 5rpx solid #7a6cfa}
+.userinfo-nickname{text-align: center;display: block;font:26rpx/30rpx "Microsoft yahei";color: #fff;margin-top: 13rpx;}
+.zg_moresf{
+  background-image: -moz-linear-gradient( 180deg, rgb(251,155,117) 0%, rgb(249,92,90) 53%);
+  background-image: -webkit-linear-gradient( 180deg, rgb(251,155,117) 0%, rgb(249,92,90) 53%);
+  background-image: -ms-linear-gradient( 180deg, rgb(251,155,117) 0%, rgb(249,92,90) 53%);
+  width: 400rpx;
+  height: 85rpx;
+  font:28rpx/85rpx "Microsoft yahei";color: #fff;
+  margin: 48rpx auto 0;
+  border-radius: 43rpx;
+  text-align: center;
+}
+.zg_morepm{border-radius: 20rpx;background-color: rgb(255, 255, 255);width: 710rpx;margin: 84rpx auto 0;padding: 34rpx 0;display: flex;flex-wrap: nowrap;align-items: center;}
+.zg_morepm>view{flex-grow: 1;text-align: center;}
+.zg_morepmtit{font:48rpx/52rpx "Microsoft yahei";color: #333;}
+.zg_morepmp{font:26rpx/30rpx "Microsoft yahei";color: #868299;margin-top: 20rpx}
+.zg_morepmfr{border-left: 1rpx solid #e6e6e6}
+.zg_morev1{width: 710rpx;margin: 30rpx auto 0;background-color: rgb(255, 255, 255);border-radius: 20rpx;}
+.zg_morev1i1{border-radius: 20rpx 20rpx 0 0}
+.zg_morev1>view{height: 100rpx;padding-left: 76rpx;}
+.zg_morev1>view view{background:url(https://www.offcn.com/zg/gwy_xcx/zg_bg15.jpg) no-repeat 570rpx 50%;background-size: 15rpx 24rpx;border-bottom: 1rpx solid #eeeeee;font:32rpx/100rpx "Microsoft yahei";color: #333333;height: 100rpx;}
+.zg_morev1>view view button{background: none;font:32rpx/100rpx "Microsoft yahei";color: #333333;height: 100rpx;padding: 0;margin-left: 0;min-height: auto;text-align: left}
+.zg_morev1vi1{background:url(https://www.offcn.com/zg/gwy_xcx/zg_bg10.jpg) no-repeat 30rpx 50%;background-size: 30rpx 30rpx;}
+.zg_morev1vi2{background:url(https://www.offcn.com/zg/gwy_xcx/zg_bg11.jpg) no-repeat 30rpx 50%;background-size: 30rpx 29rpx;}
+.zg_morev1vi3{background:url(https://www.offcn.com/zg/gwy_xcx/zg_bg12.jpg) no-repeat 30rpx 50%;background-size: 26rpx 26rpx;}
+.zg_morev1vi4{background:url(https://www.offcn.com/zg/gwy_xcx/zg_bg13.jpg) no-repeat 30rpx 50%;background-size: 27rpx 30rpx;}
+.zg_morev1vi5{background:url(https://www.offcn.com/zg/gwy_xcx/zg_bg14.jpg) no-repeat 30rpx 50%;background-size: 28rpx 25rpx;}
+.zg_morev1>view:last-child view{border:none}
+
+

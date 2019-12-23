@@ -1,0 +1,169 @@
+<!--index.wxml-->
+<view class="container">
+  <!-- <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo" class="normal_view"> 获取头像昵称</button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view> -->
+  <view class="zg_banner">
+     <view class="zg_title">2020国家公务员考试</view>
+     <view class="zg_tit">晒分<text>排名</text>及<text>分差</text>查询系统</view>
+     <view class="zg_form1">
+        <view class='navbg'>
+          <view class='fl {{flag==0?"select":"normal"}}' id='0' bindtap="switchNav">按职位信息查询</view>
+          <view class='fr {{flag==1?"select":"normal"}}' id='1' bindtap="switchNav">按职位代码查询</view>
+        </view>        
+        <view class="zg_form">
+            <view class='zg_form2 {{show==0?"show":"hide"}}'>
+              <view class="clearfix zg_formxl">
+                  <view class="zg_formxlv11 clearfix">
+                      <view class="zg_formxxv">
+                          <view class='list-msg2' bindtap='bindShowMsg'>
+                            <text>{{diqu}}</text>
+                          </view>
+                          <view class="zg_formxlv1">
+                              <view class="select_box" wx:if="{{select}}">
+                                  <view class="select_one" bindtap="mySelect" data-name="北京">北京</view>
+                                  <view class="select_one" bindtap="mySelect" data-name="北京">北京</view>
+                                  <view class="select_one" bindtap="mySelect" data-name="北京">北京</view>
+                                  <view class="select_one" bindtap="mySelect" data-name="北京">北京</view>
+                                  <view class="select_one" bindtap="mySelect" data-name="北京">北京</view>
+                                  <view class="select_one" bindtap="mySelect" data-name="北京">北京</view>
+                                  <view class="select_one" bindtap="mySelect" data-name="北京">北京</view>
+                                  <view class="select_one" bindtap="mySelect" data-name="北京">北京</view>
+                                  <view class="select_one" bindtap="mySelect" data-name="北京">北京</view>
+                                  <view class="select_one" bindtap="mySelect" data-name="北京">北京</view>
+                                  <view class="select_one" bindtap="mySelect" data-name="北京">北京</view>
+                                  <view class="select_one" bindtap="mySelect" data-name="北京">北京</view>
+                                  <view class="select_one" bindtap="mySelect" data-name="北京">北京</view>
+                                  <view class="select_one" bindtap="mySelect" data-name="北京">北京</view>
+                                  <view class="select_one" bindtap="mySelect" data-name="北京">北京</view>
+                              </view>
+                          </view>
+                          <i-icon type="unfold" size="16" color="#c8c8c8" class="zg_formxxvi" />
+                      </view>
+                      <view class="zg_formxxv">
+                          <view class='list-msg2' bindtap='bindShowMsg1'>
+                            <text>{{xtlx}}</text>
+                          </view>
+                          <view class="zg_formxlv1">
+                              <view class="select_box" wx:if="{{select1}}">
+                                  <view class="select_one" bindtap="mySelect1" data-name="北京">北京</view>
+                                  <view class="select_one" bindtap="mySelect1" data-name="北京">北京</view>
+                                  <view class="select_one" bindtap="mySelect1" data-name="北京">北京</view>
+                              </view>
+                          </view>
+                          <i-icon type="unfold" size="16" color="#c8c8c8" class="zg_formxxvi" />
+                      </view>
+                      <view class="zg_formxxv">
+                        <view class='list-msg2' bindtap='bindShowMsg2'>
+                            <text>{{bmmc}}</text>
+                          </view>
+                          <view class="zg_formxlv1">
+                              <view class="select_box" wx:if="{{select2}}">
+                                  <view class="select_one" bindtap="mySelect2" data-name="北京">北京</view>
+                                  <view class="select_one" bindtap="mySelect2" data-name="北京">北京</view>
+                                  <view class="select_one" bindtap="mySelect2" data-name="北京">北京</view>
+                              </view>
+                          </view>
+                          <i-icon type="unfold" size="16" color="#c8c8c8" class="zg_formxxvi" />
+                      </view>
+                      <view class="zg_formxxv">
+                        <view class='list-msg2' bindtap='bindShowMsg3'>
+                            <text>{{zwmc}}</text>
+                          </view>
+                          <view class="zg_formxlv1">
+                              <view class="select_box" wx:if="{{select3}}">
+                                  <view class="select_one" bindtap="mySelect3" data-name="北京">北京</view>
+                                  <view class="select_one" bindtap="mySelect3" data-name="北京">北京</view>
+                                  <view class="select_one" bindtap="mySelect3" data-name="北京">北京</view>
+                              </view>
+                          </view>
+                          <i-icon type="unfold" size="16" color="#c8c8c8" class="zg_formxxvi" />
+                      </view>
+                  </view>             
+              </view>      
+            </view>
+            <view class='zg_form2 {{show==1?"show":"hide"}}'>
+              <view class="clearfix zg_formxl">
+                  <view class="clearfix">
+                      <view class="zg_formxlv clearfix">
+                            <input bindinput="bindKeyInput4" placeholder="部门代码" placeholder-style="color:#333;"/>
+                            <view class="zg_formxlvts">
+                              您的手机号输入有误！
+                            </view>
+                      </view>
+                  </view>
+                  <view class="clearfix">
+                      <view class="zg_formxlv clearfix">
+                            <input  bindinput="bindKeyInput5" placeholder="职位代码" placeholder-style="color:#333;"/>
+                            <view class="zg_formxlvts">
+                              您的手机号输入有误！
+                            </view>
+                      </view>
+                  </view>  
+              </view>     
+            </view>
+            <view class="zg_formxl">
+              <view class="clearfix">
+                  <view class="zg_formxlv">
+                        <input bindinput="bindKeyInput" placeholder="准考证号" placeholder-style="color:#333;"/>
+                        <view class="zg_formxlvts">
+                           您的手机号输入有误！
+                        </view>
+                  </view>
+              </view>
+              <view class="clearfix">
+                  <view class="zg_formxlv">
+                        <input class="weui-input"  bindinput="bindKeyInput6" placeholder="笔试总分" placeholder-style="color:#333;"/>
+                        <view class="zg_formxlvts">
+                           您的手机号输入有误！
+                        </view>
+                  </view>
+              </view>
+              <view class="clearfix">
+                  <view class="zg_formxlv">
+                        <input class="weui-input"  bindinput="bindKeyInput1" placeholder="姓名" placeholder-style="color:#333;"/>
+                        <view class="zg_formxlvts">
+                           您的手机号输入有误！
+                        </view>
+                  </view>
+              </view>
+              <view class="clearfix">
+                  <view class="zg_formxlv clearfix">
+                        <input class="weui-input"  bindinput="bindKeyInput2" placeholder="手机号" placeholder-style="color:#333;"/>
+                        <button class='codeBtn'>{{yzm}}</button>
+                        <view class="zg_formxlvts">
+                           您的手机号输入有误！
+                        </view>
+                  </view>
+              </view>
+              <view class="clearfix">
+                  <view class="zg_formxlv">
+                        <input class="weui-input" bindinput="bindKeyInput3" placeholder="验证码" placeholder-style="color:#333;"/>
+                  </view>
+              </view>
+            </view>
+            <view>
+              <button class="zg_cx">查询</button>
+            </view>
+        </view>
+     </view>
+     <view class="zg_navbottom clearfix">
+        <view class="zg_navbottomv1 on">晒分数</view>
+        <view class="zg_navbottomv2" bindtap="searhpmtz">查排名</view>
+        <view class="zg_navbottomv3" bindtap="more">更多</view>
+     </view>  
+     <view class='zg_pmtc {{paiming==0?"hide":"show"}}'>
+        <view class="zg_pmtc1">
+            <view class="zg_pmtc1tit">不用重复晒分哦</view>
+            <text class="zg_pmtc1p">您的手机号已在其他入口完成晒分，\n可点击“查排名”直接查看结果！</text>
+            <view class="zg_pmtc1pm">查排名</view>             
+            <view class="zg_pmtcclose" bindtap="tchide"><image  src="https://www.offcn.com/zg/gwy_xcx/zg_bg5.png" mode="aspectFill">  
+    </image></view>
+        </view>
+     </view>
+  </view>  
+</view>

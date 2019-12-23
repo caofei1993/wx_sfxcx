@@ -1,0 +1,23 @@
+{
+  "pages": [
+    "pages/pmjg/pmjg",
+    "pages/index/index",
+    
+    "pages/more/more",   
+    
+    "pages/old_user/old_user",
+    "pages/gksfpm/gksfpm",     
+    "pages/logs/logs"    
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "公务员考试",
+    "navigationBarTextStyle": "black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "navigateToMiniProgramAppIdList": [
+    "wx3dec2f3a28471026"
+  ]
+}

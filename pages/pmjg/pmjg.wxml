@@ -1,0 +1,65 @@
+<!--pages/pmjg/pmjg.wxml-->
+<view class="container">
+     <view class="zg_searchpm">
+        <view class="zg_morexx">
+            <block>
+              <image src="https://www.offcn.com/zg/gwy_xcx/zg_bg9.png" class="zg_morexximg"></image>
+              <text class="userinfo-nickname">中公学员</text>
+            </block>
+            <!-- <block>
+              <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+              <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+            </block> -->
+        </view>
+        <view class="zg_pmjgview">
+             <view>
+                <view class="zg_pmjgviewv1">10</view>
+                <view class="zg_pmjgviewv2">本岗位晒分人数</view>
+             </view>
+             <view>
+                <view class="zg_pmjgviewon">2</view>
+                <view class="zg_pmjgviewv2">当前排名</view>
+             </view>
+             <view>
+                <view class="zg_pmjgviewv1">8</view>
+                <view class="zg_pmjgviewv2">与前一名分差</view>
+             </view>
+        </view>
+        <view class="zg_pmjgview1">
+           <view class="zg_pmjgview1fl">
+              领取奖励
+           </view>
+           <view class="zg_pmjgview1fr">
+              <button open-type='share'>去炫耀</button>
+           </view>
+        </view>
+        <view class="zg_searchpmtab">
+            <view class="table">
+              <view class="tr">
+                <view class="th th1">当前排名</view>
+                <view class="th th2">职位代码</view>
+                <view class="th th3">分数</view>
+                <view class="th th4">分差</view>
+              </view>
+                <view class="tr" wx:for="{{8}}">
+                  <view class="td td1">1</view>
+                  <view class="td td2">44343524423</view>
+                  <view class="td td3">130</view>
+                  <view class="td td4">0</view>
+                </view>
+            </view>
+        </view>
+        <view class="loadmore">
+            <i-load-more tip="加载更多"/>
+            <!-- <i-load-more tip="没有更多了" loading="{{ false }}" /> -->
+        </view>
+     </view>
+
+
+     <view class="zg_navbottom clearfix">
+        <view class="zg_navbottomv4" bindtap="lookkq">看考勤</view>
+        <view class="zg_navbottomv2 on">查排名</view>
+        <view class="zg_navbottomv3" bindtap="more">更多</view>
+     </view>
+</view>
+

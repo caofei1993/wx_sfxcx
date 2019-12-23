@@ -1,0 +1,66 @@
+<!--pages/old_user/old_user.wxml-->
+<view class="container">
+     <view class="zg_searchpm">
+        <view class="zg_morexx">
+            <block>
+              <image src="https://www.offcn.com/zg/gwy_xcx/zg_bg9.png" class="zg_morexximg"></image>
+              <text class="userinfo-nickname">中公学员</text>
+            </block>
+            <!-- <block>
+              <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+              <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+            </block> -->
+        </view>
+        <view class="zg_searchpmform">
+           <view class="zg_formxlv clearfix">
+              <input bindinput="bindKeyInput2" placeholder="手机号" placeholder-style="color:#fff;"/>
+              <button class='codeBtn'>{{yzm}}</button>
+              <view class="zg_formxlvts">
+                  您的手机号输入有误！
+              </view>
+           </view>
+           <view class="zg_formxlv">
+              <input bindinput="bindKeyInput3" placeholder="验证码" placeholder-style="color:#fff;"/>
+           </view>
+           <view>
+              <button class="zg_searchpmformcx">立即查询</button>
+            </view>
+        </view>
+        <view class="zg_searchpmtab">
+            <view class="table">
+              <view class="tr">
+                <view class="th th1">当前排名</view>
+                <view class="th th2">职位代码</view>
+                <view class="th th3">分数</view>
+                <view class="th th4">分差</view>
+              </view>
+                <view class="tr" wx:for="{{8}}">
+                  <view class="td td1">1</view>
+                  <view class="td td2">44343524423</view>
+                  <view class="td td3">130</view>
+                  <view class="td td4">0</view>
+                </view>
+            </view>
+        </view>
+     </view>
+
+
+
+
+
+
+     <view class="zg_navbottom clearfix">
+        <view class="zg_navbottomv1" bindtap="lookfs">晒分数</view>
+        <view class="zg_navbottomv2 on">查排名</view>
+        <view class="zg_navbottomv3" bindtap="more">更多</view>
+     </view>  
+     <view class='zg_pmtc {{paiming==0?"hide":"show"}}'>
+        <view class="zg_pmtc1">
+            <view class="zg_pmtc1tit">后台查不到您的分数</view>
+            <text class="zg_pmtc1p">您的手机号需要先完成晒分，才能看\n到对应的排名及分差哦！</text>
+            <view class="zg_pmtc1pm">查排名</view>             
+            <view class="zg_pmtcclose" bindtap="tchide"><image  src="https://www.offcn.com/zg/gwy_xcx/zg_bg5.png" mode="aspectFill">  
+    </image></view>
+        </view>
+     </view> 
+</view>

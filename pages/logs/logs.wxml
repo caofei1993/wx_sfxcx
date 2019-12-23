@@ -1,0 +1,23 @@
+<!--logs.wxml-->
+<view class="container log-list">
+  <block wx:for="{{logs}}" wx:for-item="log">
+    <text class="log-item">{{index + 1}}. {{log}}</text>
+  </block>
+</view>
+<view >
+          <view class="page-section-spacing">
+            <view class="flex-wrp" style="flex-direction:row;">
+              <view class="flex-item demo-text-1">1</view>
+              <view class="flex-item demo-text-2">2</view>
+              <view class="flex-item demo-text-3">3</view>
+            </view>
+          </view>
+          <navigator 
+    target="miniProgram" 
+    open-type="navigate" 
+    app-id="wx3dec2f3a28471026" 
+    path="pages/index/index" 
+    extra-data="{{extraData}}"
+    version="release" 
+    bindsuccess="toMiniProgramSuccess">点击超链接打开绑定的小程序</navigator>
+      </view>

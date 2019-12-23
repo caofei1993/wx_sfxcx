@@ -1,0 +1,52 @@
+/**app.wxss**/
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  background:#f5f9fc;
+} 
+
+
+.show{
+display: block;
+}
+.hide{ 
+display: none;
+}
+.fl { float: left }
+.fr { float: right }
+.clearfix:after { content: ""; display: block; clear: both; height: 0; }
+.clearfix { zoom: 1; }
+
+.zg_navbottom{
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  width: 100%;
+  height: 98rpx;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  background: #fff;
+  border-top: 1rpx solid #f0f0f0;
+  z-index: 10
+  }
+.zg_navbottom view{  
+  flex-grow: 1;
+  text-align: center;
+  font:24rpx/28rpx "";
+  color: #bbbbbb;
+  padding-top: 63rpx;
+  height: 35rpx;
+}
+.zg_navbottomv1{background:url(https://www.offcn.com/zg/gwy_xcx/zg_bg2.png) no-repeat center 14rpx;background-size: 40rpx 41rpx;}
+.zg_navbottomv1.on{background:url(https://www.offcn.com/zg/gwy_xcx/zg_bg2_1.png) no-repeat center 14rpx;background-size: 40rpx 41rpx;color: #4d82fa}
+.zg_navbottomv2{background:url(https://www.offcn.com/zg/gwy_xcx/zg_bg3.png) no-repeat center 14rpx;background-size: 40rpx 40rpx;}
+.zg_navbottomv2.on{background:url(https://www.offcn.com/zg/gwy_xcx/zg_bg3_1.png) no-repeat center 14rpx;background-size: 40rpx 40rpx;color: #4d82fa}
+.zg_navbottomv3{background:url(https://www.offcn.com/zg/gwy_xcx/zg_bg4.png) no-repeat center 14rpx;background-size: 41rpx 41rpx;}
+.zg_navbottomv3.on{background:url(https://www.offcn.com/zg/gwy_xcx/zg_bg4_1.png) no-repeat center 14rpx;background-size: 41rpx 41rpx;color: #4d82fa}
+.zg_navbottomv4{background:url(https://www.offcn.com/zg/gwy_xcx/zg_bg7.png) no-repeat center 14rpx;background-size: 45rpx 36rpx;}
+.zg_navbottomv4.on{background:url(https://www.offcn.com/zg/gwy_xcx/zg_bg7_1.png) no-repeat center 14rpx;background-size: 45rpx 36rpx;color: #4d82fa}

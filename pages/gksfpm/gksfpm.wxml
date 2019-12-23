@@ -1,0 +1,35 @@
+<!--pages/gksfpm/gksfpm.wxml-->
+<view class="container">
+  <view class="zg_gksfpm">
+     <view class="zg_gksfpmv1">
+        <view class="zg_gksfpmv1tit"><text>我的岗位信息</text></view>
+        <view class="zg_gksfpmbmmc zg_gksfpmv11">
+           部门名称：税务局
+        </view>
+        <view class="zg_gksfpmzwmc zg_gksfpmv11">
+           职位名称：文员
+        </view>
+        <view class="zg_gksfpmmszx zg_gksfpmv11">
+           面试专业专项类别：<text>结构化小组</text>
+        </view>
+        <view class="zg_gksfpmbmmczy">         
+             专业专项分类依据历年考情判断，最终面试形式以面试公告为准！         
+        </view>
+     </view>
+     <view class="zg_gksfpmv2">
+        <view class="zg_gksfpmv1tit"><text>国考面试早准备</text></view>
+        <view class="zg_gksfpmv2vi1">
+           <image src="https://www.offcn.com/zg/gwy_xcx/zg_bg18.jpg"></image>
+        </view>
+        <view class="zg_gksfpmv2vi2">立即领取</view>
+     </view>
+     <view class="zg_gksfpmv3">
+        <image src="https://www.offcn.com/zg/gwy_xcx/zg_bg19.png"></image>
+     </view>
+  </view>
+  <view class="zg_navbottom clearfix">
+          <view class="zg_navbottomv4 on">看考情</view>
+          <view class="zg_navbottomv2" bindtap="searhpmtz">查排名</view>
+          <view class="zg_navbottomv3" bindtap="more">更多</view>
+  </view> 
+</view> 

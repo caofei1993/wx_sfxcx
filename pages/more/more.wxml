@@ -1,0 +1,57 @@
+<!--pages/more/more.wxml-->
+<!-- <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo" class="normal_view"> 获取头像昵称</button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view> -->
+<view class="container">
+  <view class="zg_more">
+    <view class="zg_morexx">
+        <block>
+          <image src="https://www.offcn.com/zg/gwy_xcx/zg_bg9.png" class="zg_morexximg"></image>
+          <text class="userinfo-nickname">中公学员</text>
+        </block>
+        <!-- <block>
+          <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+          <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+        </block> -->
+    </view>  
+    <view class="zg_moresf">
+        请先晒分
+    </view>
+    <view class="zg_morepm clearfix">
+        <view class="zg_morepmfl">
+            <view class="zg_morepmtit">2</view>
+            <view class="zg_morepmp">当前排名</view>
+        </view>
+        <view class="zg_morepmfr">
+            <view class="zg_morepmtit">15</view>
+            <view class="zg_morepmp">本岗位晒分人数</view>
+        </view>
+    </view>
+    <view class="zg_morev1">
+        <view class="zg_morev1vi1">
+          <view><button open-type='share'>炫耀一下</button></view>
+        </view>
+        <view class="zg_morev1vi2">
+          <view><button open-type='contact'>课程咨询</button></view>
+        </view>
+        <view class="zg_morev1vi3">
+          <view>考前加油包</view>
+        </view>
+        <view class="zg_morev1vi4">
+          <view>在线面试测评</view>
+        </view>
+        <view class="zg_morev1vi5">
+          <view>19课堂直播</view>
+        </view>
+    </view>
+  </view>
+  <view class="zg_navbottom clearfix">
+          <view class="zg_navbottomv4" bindtap="lookkq">看考情</view>
+          <view class="zg_navbottomv2" bindtap="searhpmtz">查排名</view>
+          <view class="zg_navbottomv3 on">更多</view>
+  </view> 
+</view> 
