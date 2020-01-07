@@ -2,33 +2,211 @@
 <view class="container">
      <view class="zg_searchpm">
         <view class="zg_morexx">
-            <block>
-              <image src="https://www.offcn.com/zg/gwy_xcx/zg_bg9.png" class="zg_morexximg"></image>
+            <view class='{{show==0?"show":"hide"}}'>
+              <image src="https://hd.offcn.com/2017gksf/public/static/2020gksf/images/zg_bg9.png" class="zg_morexximg"></image>
               <text class="userinfo-nickname">中公学员</text>
-            </block>
-            <!-- <block>
-              <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-              <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-            </block> -->
+            </view>
+            <view class='{{show==1?"show":"hide"}}'>
+              <image class="zg_morexximg" src="{{avatarurl}}"></image>
+              <text class="userinfo-nickname">{{nickname}}</text>
+            </view>
         </view>
         <view class="zg_pmjgview">
              <view>
-                <view class="zg_pmjgviewv1">10</view>
+                <view class="zg_pmjgviewv1">{{total}}</view>
                 <view class="zg_pmjgviewv2">本岗位晒分人数</view>
              </view>
              <view>
-                <view class="zg_pmjgviewon">2</view>
+                <view class="zg_pmjgviewon">{{num}}</view>
                 <view class="zg_pmjgviewv2">当前排名</view>
              </view>
              <view>
-                <view class="zg_pmjgviewv1">8</view>
+                <view class="zg_pmjgviewv1">{{cha}}</view>
                 <view class="zg_pmjgviewv2">与前一名分差</view>
              </view>
         </view>
         <view class="zg_pmjgview1">
-           <view class="zg_pmjgview1fl">
-              领取奖励
-           </view>
+           
+           <view class="zg_pmjgview1fl {{lq_show==1?'show':'hide'}}">
+              <navigator 
+          target="miniProgram" 
+          open-type="navigate" 
+          app-id="wx3dec2f3a28471026" 
+          path="pages/index/index?source=sharelock&minicodeid=28991" 
+          extra-data="{{extraData}}"
+          version="release" 
+          bindsuccess="toMiniProgramSuccess">领取奖励</navigator>
+          </view>
+        <view class="zg_pmjgview1fl {{lq_show==2?'show':'hide'}}">
+              <navigator 
+              target="miniProgram" 
+              open-type="navigate" 
+              app-id="wx3dec2f3a28471026" 
+              path="pages/index/index?source=sharelock&minicodeid=28991" 
+              extra-data="{{extraData}}"
+              version="release" 
+              bindsuccess="toMiniProgramSuccess">领取奖励</navigator>
+              </view>
+        <view class="zg_pmjgview1fl {{lq_show==3?'show':'hide'}}">
+              <navigator 
+          target="miniProgram" 
+          open-type="navigate" 
+          app-id="wx3dec2f3a28471026" 
+          path="pages/index/index?source=sharelock&minicodeid=28992" 
+          extra-data="{{extraData}}"
+          version="release" 
+          bindsuccess="toMiniProgramSuccess">领取奖励</navigator>
+          </view>
+        <view class="zg_pmjgview1fl {{lq_show==4?'show':'hide'}}">
+              <navigator 
+              target="miniProgram" 
+              open-type="navigate" 
+              app-id="wx3dec2f3a28471026" 
+              path="pages/index/index?source=sharelock&minicodeid=28993" 
+              extra-data="{{extraData}}"
+              version="release" 
+              bindsuccess="toMiniProgramSuccess">领取奖励</navigator>
+              </view>
+        <view class="zg_pmjgview1fl {{lq_show==5?'show':'hide'}}">
+              <navigator 
+          target="miniProgram" 
+          open-type="navigate" 
+          app-id="wx3dec2f3a28471026" 
+          path="pages/index/index?source=sharelock&minicodeid=28994" 
+          extra-data="{{extraData}}"
+          version="release" 
+          bindsuccess="toMiniProgramSuccess">领取奖励</navigator>
+          </view>
+        <view class="zg_pmjgview1fl {{lq_show==6?'show':'hide'}}">
+              <navigator 
+              target="miniProgram" 
+              open-type="navigate" 
+              app-id="wx3dec2f3a28471026" 
+              path="pages/index/index?source=sharelock&minicodeid=28995" 
+              extra-data="{{extraData}}"
+              version="release" 
+              bindsuccess="toMiniProgramSuccess">领取奖励</navigator>
+              </view>
+        <view class="zg_pmjgview1fl {{lq_show==7?'show':'hide'}}">
+              <navigator 
+          target="miniProgram" 
+          open-type="navigate" 
+          app-id="wx3dec2f3a28471026" 
+          path="pages/index/index?source=sharelock&minicodeid=28996" 
+          extra-data="{{extraData}}"
+          version="release" 
+          bindsuccess="toMiniProgramSuccess">领取奖励</navigator>
+          </view>
+        <view class="zg_pmjgview1fl {{lq_show==8?'show':'hide'}}">
+              <navigator 
+              target="miniProgram" 
+              open-type="navigate" 
+              app-id="wx3dec2f3a28471026" 
+              path="pages/index/index?source=sharelock&minicodeid=28997" 
+              extra-data="{{extraData}}"
+              version="release" 
+              bindsuccess="toMiniProgramSuccess">领取奖励</navigator>
+              </view>
+        <view class="zg_pmjgview1fl {{lq_show==9?'show':'hide'}}">
+              <navigator 
+          target="miniProgram" 
+          open-type="navigate" 
+          app-id="wx3dec2f3a28471026" 
+          path="pages/index/index?source=sharelock&minicodeid=28998" 
+          extra-data="{{extraData}}"
+          version="release" 
+          bindsuccess="toMiniProgramSuccess">领取奖励</navigator>
+          </view>
+        <view class="zg_pmjgview1fl {{lq_show==10?'show':'hide'}}">
+              <navigator 
+              target="miniProgram" 
+              open-type="navigate" 
+              app-id="wx3dec2f3a28471026" 
+              path="pages/index/index?source=sharelock&minicodeid=28999" 
+              extra-data="{{extraData}}"
+              version="release" 
+              bindsuccess="toMiniProgramSuccess">领取奖励</navigator>
+              </view>
+        <view class="zg_pmjgview1fl {{lq_show==11?'show':'hide'}}">
+              <navigator 
+          target="miniProgram" 
+          open-type="navigate" 
+          app-id="wx3dec2f3a28471026" 
+          path="pages/index/index?source=sharelock&minicodeid=29000" 
+          extra-data="{{extraData}}"
+          version="release" 
+          bindsuccess="toMiniProgramSuccess">领取奖励</navigator>
+          </view>
+        <view class="zg_pmjgview1fl {{lq_show==12?'show':'hide'}}">
+              <navigator 
+              target="miniProgram" 
+              open-type="navigate" 
+              app-id="wx3dec2f3a28471026" 
+              path="pages/index/index?source=sharelock&minicodeid=29001" 
+              extra-data="{{extraData}}"
+              version="release" 
+              bindsuccess="toMiniProgramSuccess">领取奖励</navigator>
+              </view>
+        <view class="zg_pmjgview1fl {{lq_show==13?'show':'hide'}}">
+              <navigator 
+          target="miniProgram" 
+          open-type="navigate" 
+          app-id="wx3dec2f3a28471026" 
+          path="pages/index/index?source=sharelock&minicodeid=29002" 
+          extra-data="{{extraData}}"
+          version="release" 
+          bindsuccess="toMiniProgramSuccess">领取奖励</navigator>
+          </view>
+        <view class="zg_pmjgview1fl {{lq_show==14?'show':'hide'}}">
+              <navigator 
+              target="miniProgram" 
+              open-type="navigate" 
+              app-id="wx3dec2f3a28471026" 
+              path="pages/index/index?source=sharelock&minicodeid=29003" 
+              extra-data="{{extraData}}"
+              version="release" 
+              bindsuccess="toMiniProgramSuccess">领取奖励</navigator>
+              </view>
+        <view class="zg_pmjgview1fl {{lq_show==15?'show':'hide'}}">
+              <navigator 
+          target="miniProgram" 
+          open-type="navigate" 
+          app-id="wx3dec2f3a28471026" 
+          path="pages/index/index?source=sharelock&minicodeid=29004" 
+          extra-data="{{extraData}}"
+          version="release" 
+          bindsuccess="toMiniProgramSuccess">领取奖励</navigator>
+          </view>
+        <view class="zg_pmjgview1fl {{lq_show==16?'show':'hide'}}">
+              <navigator 
+              target="miniProgram" 
+              open-type="navigate" 
+              app-id="wx3dec2f3a28471026" 
+              path="pages/index/index?source=sharelock&minicodeid=29004" 
+              extra-data="{{extraData}}"
+              version="release" 
+              bindsuccess="toMiniProgramSuccess">领取奖励</navigator>
+              </view>
+        <view class="zg_pmjgview1fl {{lq_show==17?'show':'hide'}}">
+              <navigator 
+          target="miniProgram" 
+          open-type="navigate" 
+          app-id="wx3dec2f3a28471026" 
+          path="pages/index/index?source=sharelock&minicodeid=29004" 
+          extra-data="{{extraData}}"
+          version="release" 
+          bindsuccess="toMiniProgramSuccess">领取奖励</navigator>
+          </view>
+        <view class="zg_pmjgview1fl {{lq_show==18?'show':'hide'}}">
+              <navigator 
+              target="miniProgram" 
+              open-type="navigate" 
+              app-id="wx3dec2f3a28471026" 
+              path="pages/index/index?source=sharelock&minicodeid=29004" 
+              extra-data="{{extraData}}"
+              version="release" 
+              bindsuccess="toMiniProgramSuccess">领取奖励</navigator>
+        </view>
            <view class="zg_pmjgview1fr">
               <button open-type='share'>去炫耀</button>
            </view>
@@ -41,23 +219,21 @@
                 <view class="th th3">分数</view>
                 <view class="th th4">分差</view>
               </view>
-                <view class="tr" wx:for="{{8}}">
-                  <view class="td td1">1</view>
-                  <view class="td td2">44343524423</view>
-                  <view class="td td3">130</view>
-                  <view class="td td4">0</view>
+                <view class="tr {{num==index+1?'on':''}}" wx:for="{{list}}" wx-for-item="item" wx-for-index="index" >
+                  <view class="td td1">{{index+1}}</view>
+                  <view class="td td2">{{item.zwnum}}</view>
+                  <view class="td td3">{{item.allscore}}</view>
+                  <view class="td td4">{{item.cha}}</view>
                 </view>
             </view>
         </view>
         <view class="loadmore">
-            <i-load-more tip="加载更多"/>
-            <!-- <i-load-more tip="没有更多了" loading="{{ false }}" /> -->
+            <i-load-more tip="加载更多" class='{{state==1?"show":"hide"}}'/>
+            <i-load-more tip="没有更多了" loading="{{ false }}"  class='{{state==0?"show":"hide"}}'/>
         </view>
      </view>
-
-
      <view class="zg_navbottom clearfix">
-        <view class="zg_navbottomv4" bindtap="lookkq">看考勤</view>
+        <view class="zg_navbottomv4" bindtap="lookkq">看考情</view>
         <view class="zg_navbottomv2 on">查排名</view>
         <view class="zg_navbottomv3" bindtap="more">更多</view>
      </view>

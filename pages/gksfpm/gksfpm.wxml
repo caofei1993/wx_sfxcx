@@ -4,13 +4,13 @@
      <view class="zg_gksfpmv1">
         <view class="zg_gksfpmv1tit"><text>我的岗位信息</text></view>
         <view class="zg_gksfpmbmmc zg_gksfpmv11">
-           部门名称：税务局
+           部门名称：{{department}}
         </view>
         <view class="zg_gksfpmzwmc zg_gksfpmv11">
-           职位名称：文员
+           职位名称：{{job}}
         </view>
         <view class="zg_gksfpmmszx zg_gksfpmv11">
-           面试专业专项类别：<text>结构化小组</text>
+           面试专业专项类别：<text>{{zyzx}}</text>
         </view>
         <view class="zg_gksfpmbmmczy">         
              专业专项分类依据历年考情判断，最终面试形式以面试公告为准！         
@@ -19,12 +19,200 @@
      <view class="zg_gksfpmv2">
         <view class="zg_gksfpmv1tit"><text>国考面试早准备</text></view>
         <view class="zg_gksfpmv2vi1">
-           <image src="https://www.offcn.com/zg/gwy_xcx/zg_bg18.jpg"></image>
+           <image src="https://hd.offcn.com/2017gksf/public/static/2020gksf/images/zg_bg18.jpg" class="{{img_show==1?'show':'hide'}}"></image>
+           <image src="https://hd.offcn.com/2017gksf/public/static/2020gksf/images/zg_bg18_1.jpg" class="{{img_show==2?'show':'hide'}}"></image>
         </view>
-        <view class="zg_gksfpmv2vi2">立即领取</view>
+        <view class="zg_gksfpmv2vi2 {{lq_show==1?'show':'hide'}}">
+              <navigator 
+          target="miniProgram" 
+          open-type="navigate" 
+          app-id="wx3dec2f3a28471026" 
+          path="pages/index/index?source=sharelock&minicodeid=28991" 
+          extra-data="{{extraData}}"
+          version="release" 
+          bindsuccess="toMiniProgramSuccess">立即领取</navigator>
+          </view>
+        <view class="zg_gksfpmv2vi2 {{lq_show==2?'show':'hide'}}">
+              <navigator 
+              target="miniProgram" 
+              open-type="navigate" 
+              app-id="wx3dec2f3a28471026" 
+              path="pages/index/index?source=sharelock&minicodeid=28991" 
+              extra-data="{{extraData}}"
+              version="release" 
+              bindsuccess="toMiniProgramSuccess">立即领取</navigator>
+              </view>
+        <view class="zg_gksfpmv2vi2 {{lq_show==3?'show':'hide'}}">
+              <navigator 
+          target="miniProgram" 
+          open-type="navigate" 
+          app-id="wx3dec2f3a28471026" 
+          path="pages/index/index?source=sharelock&minicodeid=28992" 
+          extra-data="{{extraData}}"
+          version="release" 
+          bindsuccess="toMiniProgramSuccess">立即领取</navigator>
+          </view>
+        <view class="zg_gksfpmv2vi2 {{lq_show==4?'show':'hide'}}">
+              <navigator 
+              target="miniProgram" 
+              open-type="navigate" 
+              app-id="wx3dec2f3a28471026" 
+              path="pages/index/index?source=sharelock&minicodeid=28993" 
+              extra-data="{{extraData}}"
+              version="release" 
+              bindsuccess="toMiniProgramSuccess">立即领取</navigator>
+              </view>
+        <view class="zg_gksfpmv2vi2 {{lq_show==5?'show':'hide'}}">
+              <navigator 
+          target="miniProgram" 
+          open-type="navigate" 
+          app-id="wx3dec2f3a28471026" 
+          path="pages/index/index?source=sharelock&minicodeid=28994" 
+          extra-data="{{extraData}}"
+          version="release" 
+          bindsuccess="toMiniProgramSuccess">立即领取</navigator>
+          </view>
+        <view class="zg_gksfpmv2vi2 {{lq_show==6?'show':'hide'}}">
+              <navigator 
+              target="miniProgram" 
+              open-type="navigate" 
+              app-id="wx3dec2f3a28471026" 
+              path="pages/index/index?source=sharelock&minicodeid=28995" 
+              extra-data="{{extraData}}"
+              version="release" 
+              bindsuccess="toMiniProgramSuccess">立即领取</navigator>
+              </view>
+        <view class="zg_gksfpmv2vi2 {{lq_show==7?'show':'hide'}}">
+              <navigator 
+          target="miniProgram" 
+          open-type="navigate" 
+          app-id="wx3dec2f3a28471026" 
+          path="pages/index/index?source=sharelock&minicodeid=28996" 
+          extra-data="{{extraData}}"
+          version="release" 
+          bindsuccess="toMiniProgramSuccess">立即领取</navigator>
+          </view>
+        <view class="zg_gksfpmv2vi2 {{lq_show==8?'show':'hide'}}">
+              <navigator 
+              target="miniProgram" 
+              open-type="navigate" 
+              app-id="wx3dec2f3a28471026" 
+              path="pages/index/index?source=sharelock&minicodeid=28997" 
+              extra-data="{{extraData}}"
+              version="release" 
+              bindsuccess="toMiniProgramSuccess">立即领取</navigator>
+              </view>
+        <view class="zg_gksfpmv2vi2 {{lq_show==9?'show':'hide'}}">
+              <navigator 
+          target="miniProgram" 
+          open-type="navigate" 
+          app-id="wx3dec2f3a28471026" 
+          path="pages/index/index?source=sharelock&minicodeid=28998" 
+          extra-data="{{extraData}}"
+          version="release" 
+          bindsuccess="toMiniProgramSuccess">立即领取</navigator>
+          </view>
+        <view class="zg_gksfpmv2vi2 {{lq_show==10?'show':'hide'}}">
+              <navigator 
+              target="miniProgram" 
+              open-type="navigate" 
+              app-id="wx3dec2f3a28471026" 
+              path="pages/index/index?source=sharelock&minicodeid=28999" 
+              extra-data="{{extraData}}"
+              version="release" 
+              bindsuccess="toMiniProgramSuccess">立即领取</navigator>
+              </view>
+        <view class="zg_gksfpmv2vi2 {{lq_show==11?'show':'hide'}}">
+              <navigator 
+          target="miniProgram" 
+          open-type="navigate" 
+          app-id="wx3dec2f3a28471026" 
+          path="pages/index/index?source=sharelock&minicodeid=29000" 
+          extra-data="{{extraData}}"
+          version="release" 
+          bindsuccess="toMiniProgramSuccess">立即领取</navigator>
+          </view>
+        <view class="zg_gksfpmv2vi2 {{lq_show==12?'show':'hide'}}">
+              <navigator 
+              target="miniProgram" 
+              open-type="navigate" 
+              app-id="wx3dec2f3a28471026" 
+              path="pages/index/index?source=sharelock&minicodeid=29001" 
+              extra-data="{{extraData}}"
+              version="release" 
+              bindsuccess="toMiniProgramSuccess">立即领取</navigator>
+              </view>
+        <view class="zg_gksfpmv2vi2 {{lq_show==13?'show':'hide'}}">
+              <navigator 
+          target="miniProgram" 
+          open-type="navigate" 
+          app-id="wx3dec2f3a28471026" 
+          path="pages/index/index?source=sharelock&minicodeid=29002" 
+          extra-data="{{extraData}}"
+          version="release" 
+          bindsuccess="toMiniProgramSuccess">立即领取</navigator>
+          </view>
+        <view class="zg_gksfpmv2vi2 {{lq_show==14?'show':'hide'}}">
+              <navigator 
+              target="miniProgram" 
+              open-type="navigate" 
+              app-id="wx3dec2f3a28471026" 
+              path="pages/index/index?source=sharelock&minicodeid=29003" 
+              extra-data="{{extraData}}"
+              version="release" 
+              bindsuccess="toMiniProgramSuccess">立即领取</navigator>
+              </view>
+        <view class="zg_gksfpmv2vi2 {{lq_show==15?'show':'hide'}}">
+              <navigator 
+          target="miniProgram" 
+          open-type="navigate" 
+          app-id="wx3dec2f3a28471026" 
+          path="pages/index/index?source=sharelock&minicodeid=29004" 
+          extra-data="{{extraData}}"
+          version="release" 
+          bindsuccess="toMiniProgramSuccess">立即领取</navigator>
+          </view>
+        <view class="zg_gksfpmv2vi2 {{lq_show==16?'show':'hide'}}">
+              <navigator 
+              target="miniProgram" 
+              open-type="navigate" 
+              app-id="wx3dec2f3a28471026" 
+              path="pages/index/index?source=sharelock&minicodeid=29004" 
+              extra-data="{{extraData}}"
+              version="release" 
+              bindsuccess="toMiniProgramSuccess">立即领取</navigator>
+              </view>
+        <view class="zg_gksfpmv2vi2 {{lq_show==17?'show':'hide'}}">
+              <navigator 
+          target="miniProgram" 
+          open-type="navigate" 
+          app-id="wx3dec2f3a28471026" 
+          path="pages/index/index?source=sharelock&minicodeid=29004" 
+          extra-data="{{extraData}}"
+          version="release" 
+          bindsuccess="toMiniProgramSuccess">立即领取</navigator>
+          </view>
+        <view class="zg_gksfpmv2vi2 {{lq_show==18?'show':'hide'}}">
+              <navigator 
+              target="miniProgram" 
+              open-type="navigate" 
+              app-id="wx3dec2f3a28471026" 
+              path="pages/index/index?source=sharelock&minicodeid=29004" 
+              extra-data="{{extraData}}"
+              version="release" 
+              bindsuccess="toMiniProgramSuccess">立即领取</navigator>
+        </view>
      </view>
      <view class="zg_gksfpmv3">
-        <image src="https://www.offcn.com/zg/gwy_xcx/zg_bg19.png"></image>
+      <navigator 
+    target="miniProgram" 
+    open-type="navigate" 
+    app-id="wxbb649293a97fa28a" 
+    path="pages/course-detail/course-detail?courseId=3146" 
+    extra-data="{{extraData}}"
+    version="release" 
+    bindsuccess="toMiniProgramSuccess"><image src="https://hd.offcn.com/2017gksf/public/static/2020gksf/images/zg_bg19.png"></image></navigator>
+        
      </view>
   </view>
   <view class="zg_navbottom clearfix">

@@ -1,12 +1,12 @@
 <!--index.wxml-->
 <view class="container">
-  <!-- <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo" class="normal_view"> 获取头像昵称</button>
-    <block wx:else>
+  <view class="userinfo" wx:if="{{!hasUserInfo && canIUse}}" class="normal_view1">
+    <button open-type="getUserInfo" bindgetuserinfo="getUserInfo" class="normal_view"><image src="https://hd.offcn.com/2017gksf/public/static/2020gksf/images/zg_bg25.png"></image></button>
+    <!-- <block wx:else>
       <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
       <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
-  </view> -->
+    </block> -->
+  </view>
   <view class="zg_banner">
      <view class="zg_title">2020国家公务员考试</view>
      <view class="zg_tit">晒分<text>排名</text>及<text>分差</text>查询系统</view>
@@ -22,66 +22,108 @@
                       <view class="zg_formxxv">
                           <view class='list-msg2' bindtap='bindShowMsg'>
                             <text>{{diqu}}</text>
-                          </view>
-                          <view class="zg_formxlv1">
-                              <view class="select_box" wx:if="{{select}}">
-                                  <view class="select_one" bindtap="mySelect" data-name="北京">北京</view>
-                                  <view class="select_one" bindtap="mySelect" data-name="北京">北京</view>
-                                  <view class="select_one" bindtap="mySelect" data-name="北京">北京</view>
-                                  <view class="select_one" bindtap="mySelect" data-name="北京">北京</view>
-                                  <view class="select_one" bindtap="mySelect" data-name="北京">北京</view>
-                                  <view class="select_one" bindtap="mySelect" data-name="北京">北京</view>
-                                  <view class="select_one" bindtap="mySelect" data-name="北京">北京</view>
-                                  <view class="select_one" bindtap="mySelect" data-name="北京">北京</view>
-                                  <view class="select_one" bindtap="mySelect" data-name="北京">北京</view>
-                                  <view class="select_one" bindtap="mySelect" data-name="北京">北京</view>
-                                  <view class="select_one" bindtap="mySelect" data-name="北京">北京</view>
-                                  <view class="select_one" bindtap="mySelect" data-name="北京">北京</view>
-                                  <view class="select_one" bindtap="mySelect" data-name="北京">北京</view>
-                                  <view class="select_one" bindtap="mySelect" data-name="北京">北京</view>
-                                  <view class="select_one" bindtap="mySelect" data-name="北京">北京</view>
-                              </view>
-                          </view>
+                          </view>                          
                           <i-icon type="unfold" size="16" color="#c8c8c8" class="zg_formxxvi" />
+                          <view class="modal modal-bottom-dialog" hidden="{{hideFlag}}">
+                            <view class="modal-cancel" bindtap="hideModal"></view>
+                                <view class="bottom-dialog-body bottom-positon" animation="{{animationData}}">
+                                  <view class='Mselect'>
+                                      <view class="select_one" bindtap="mySelect" data-name="安徽">安徽</view>
+                                      <view class="select_one" bindtap="mySelect" data-name="北京">北京</view>
+                                      <view class="select_one" bindtap="mySelect" data-name="重庆">重庆</view>
+                                      <view class="select_one" bindtap="mySelect" data-name="福建">福建</view>
+                                      <view class="select_one" bindtap="mySelect" data-name="广东">广东</view>
+                                      <view class="select_one" bindtap="mySelect" data-name="贵州">贵州</view>
+                                      <view class="select_one" bindtap="mySelect" data-name="广西">广西</view>
+                                      <view class="select_one" bindtap="mySelect" data-name="甘肃">甘肃</view>
+                                      <view class="select_one" bindtap="mySelect" data-name="湖南">湖南</view>
+                                      <view class="select_one" bindtap="mySelect" data-name="湖北">湖北</view>
+                                      <view class="select_one" bindtap="mySelect" data-name="河北">河北</view>
+                                      <view class="select_one" bindtap="mySelect" data-name="河南">河南</view>
+                                      <view class="select_one" bindtap="mySelect" data-name="海南">海南</view>
+                                      <view class="select_one" bindtap="mySelect" data-name="江苏">江苏</view>
+                                      <view class="select_one" bindtap="mySelect" data-name="吉林">吉林</view>
+                                      <view class="select_one" bindtap="mySelect" data-name="江西">江西</view>
+                                      <view class="select_one" bindtap="mySelect" data-name="辽宁">辽宁</view>
+                                      <view class="select_one" bindtap="mySelect" data-name="宁夏">宁夏</view>
+                                      <view class="select_one" bindtap="mySelect" data-name="青海">青海</view>
+                                      <view class="select_one" bindtap="mySelect" data-name="四川">四川</view>
+                                      <view class="select_one" bindtap="mySelect" data-name="山东">山东</view>
+                                      <view class="select_one" bindtap="mySelect" data-name="山西">山西</view>
+                                      <view class="select_one" bindtap="mySelect" data-name="上海">上海</view>
+                                      <view class="select_one" bindtap="mySelect" data-name="天津">天津</view>
+                                      <view class="select_one" bindtap="mySelect" data-name="新疆">新疆</view>
+                                      <view class="select_one" bindtap="mySelect" data-name="西藏">西藏</view>
+                                      <view class="select_one" bindtap="mySelect" data-name="云南">云南</view>
+                                      <view class="select_one" bindtap="mySelect" data-name="浙江">浙江</view>
+                                      <view class="select_one" bindtap="mySelect" data-name="内蒙古">内蒙古</view>
+                                      <view class="select_one" bindtap="mySelect" data-name="黑龙江">黑龙江</view>
+                                  </view>
+                                <view>
+                            </view>
+                              <view class='Mcancel' bindtap='mCancel'>
+                                <text>取消</text>
+                              </view>                        
+                            </view>
+                          </view>
                       </view>
                       <view class="zg_formxxv">
                           <view class='list-msg2' bindtap='bindShowMsg1'>
                             <text>{{xtlx}}</text>
-                          </view>
-                          <view class="zg_formxlv1">
-                              <view class="select_box" wx:if="{{select1}}">
-                                  <view class="select_one" bindtap="mySelect1" data-name="北京">北京</view>
-                                  <view class="select_one" bindtap="mySelect1" data-name="北京">北京</view>
-                                  <view class="select_one" bindtap="mySelect1" data-name="北京">北京</view>
-                              </view>
-                          </view>
+                          </view>                        
                           <i-icon type="unfold" size="16" color="#c8c8c8" class="zg_formxxvi" />
+                          <view class="modal modal-bottom-dialog" hidden="{{hideFlag1}}">
+                            <view class="modal-cancel" bindtap="hideModal1"></view>
+                                <view class="bottom-dialog-body bottom-positon" animation="{{animationData}}">
+                                  <view class='Mselect'>
+                                      <view class="select_one" bindtap="mySelect1" data-name="{{item}}"  wx:for="{{list.html}}" wx-for-index="index" wx-for-item="item">{{item}}</view>
+                                  </view>
+                                <view>
+                            </view>
+                              <view class='Mcancel' bindtap='mCancel1'>
+                                <text>取消</text>
+                              </view>                        
+                            </view>
+                          </view>
                       </view>
                       <view class="zg_formxxv">
                         <view class='list-msg2' bindtap='bindShowMsg2'>
                             <text>{{bmmc}}</text>
                           </view>
-                          <view class="zg_formxlv1">
-                              <view class="select_box" wx:if="{{select2}}">
-                                  <view class="select_one" bindtap="mySelect2" data-name="北京">北京</view>
-                                  <view class="select_one" bindtap="mySelect2" data-name="北京">北京</view>
-                                  <view class="select_one" bindtap="mySelect2" data-name="北京">北京</view>
-                              </view>
-                          </view>
+                          
                           <i-icon type="unfold" size="16" color="#c8c8c8" class="zg_formxxvi" />
+                          <view class="modal modal-bottom-dialog" hidden="{{hideFlag2}}">
+                            <view class="modal-cancel" bindtap="hideModal2"></view>
+                                <view class="bottom-dialog-body bottom-positon" animation="{{animationData}}">
+                                  <view class='Mselect'>
+                                      <view class="select_one" bindtap="mySelect2" data-name="{{item}}"  wx:for="{{list1.html}}" wx-for-index="index" wx-for-item="item">{{item}}</view>
+                                  </view>
+                                <view>
+                            </view>
+                              <view class='Mcancel' bindtap='mCancel2'>
+                                <text>取消</text>
+                              </view>                        
+                            </view>
+                          </view>
                       </view>
                       <view class="zg_formxxv">
-                        <view class='list-msg2' bindtap='bindShowMsg3'>
+                          <view class='list-msg2' bindtap='bindShowMsg3'>
                             <text>{{zwmc}}</text>
-                          </view>
-                          <view class="zg_formxlv1">
-                              <view class="select_box" wx:if="{{select3}}">
-                                  <view class="select_one" bindtap="mySelect3" data-name="北京">北京</view>
-                                  <view class="select_one" bindtap="mySelect3" data-name="北京">北京</view>
-                                  <view class="select_one" bindtap="mySelect3" data-name="北京">北京</view>
-                              </view>
-                          </view>
+                          </view>                        
                           <i-icon type="unfold" size="16" color="#c8c8c8" class="zg_formxxvi" />
+                          <view class="modal modal-bottom-dialog" hidden="{{hideFlag3}}">
+                            <view class="modal-cancel" bindtap="hideModal3"></view>
+                                <view class="bottom-dialog-body bottom-positon" animation="{{animationData}}">
+                                  <view class='Mselect'>
+                                      <view class="select_one" bindtap="mySelect3" data-name="{{item}}"  wx:for="{{list2.html}}" wx-for-index="index" wx-for-item="item">{{item}}</view>
+                                  </view>
+                                <view>
+                            </view>
+                              <view class='Mcancel' bindtap='mCancel3'>
+                                <text>取消</text>
+                              </view>                        
+                            </view>
+                          </view>
                       </view>
                   </view>             
               </view>      
@@ -90,66 +132,75 @@
               <view class="clearfix zg_formxl">
                   <view class="clearfix">
                       <view class="zg_formxlv clearfix">
-                            <input bindinput="bindKeyInput4" placeholder="部门代码" placeholder-style="color:#333;"/>
-                            <view class="zg_formxlvts">
-                              您的手机号输入有误！
+                            <input bindfocus="bindKeyInput4" bindinput="bindKeyInput4" placeholder="部门代码" placeholder-style="color:#333;"  bindblur="inputBlur4"/>
+                            <view class="zg_formxlvts {{inputValue4_1==1?'show':'hide'}}">
+                              请输入正确的部门代码！
                             </view>
                       </view>
                   </view>
                   <view class="clearfix">
                       <view class="zg_formxlv clearfix">
-                            <input  bindinput="bindKeyInput5" placeholder="职位代码" placeholder-style="color:#333;"/>
-                            <view class="zg_formxlvts">
-                              您的手机号输入有误！
+                            <input bindfocus="bindKeyInput5"  bindinput="bindKeyInput5" placeholder="职位代码" placeholder-style="color:#333;"  bindblur="inputBlur5"/>
+                            <view class="zg_formxlvts {{inputValue5_1==1?'show':'hide'}}">
+                              请输入正确的职位代码！
                             </view>
                       </view>
                   </view>  
               </view>     
             </view>
-            <view class="zg_formxl">
+            <view class="zg_formxl {{inputValue7_1==1?'zg_formxlp':''}}">
               <view class="clearfix">
                   <view class="zg_formxlv">
-                        <input bindinput="bindKeyInput" placeholder="准考证号" placeholder-style="color:#333;"/>
-                        <view class="zg_formxlvts">
-                           您的手机号输入有误！
+                        <input bindfocus="bindKeyInput" bindinput="bindKeyInput" placeholder="准考证号" placeholder-style="color:#333;" bindblur="inputBlur"/>
+                        <view class="zg_formxlvts {{inputValue_1==1?'show':'hide'}}">
+                           请输入真实的准考证号！
                         </view>
                   </view>
               </view>
               <view class="clearfix">
                   <view class="zg_formxlv">
-                        <input class="weui-input"  bindinput="bindKeyInput6" placeholder="笔试总分" placeholder-style="color:#333;"/>
-                        <view class="zg_formxlvts">
-                           您的手机号输入有误！
+                        <input class="weui-input" bindfocus="bindKeyInput6"  bindinput="bindKeyInput6" placeholder="笔试总分" placeholder-style="color:#333;"  bindblur="inputBlur6" maxlength="7"/>
+                        <view class="zg_formxlvts {{inputValue6_1==1?'show':'hide'}}">
+                           请输入正确的笔试总成绩！
                         </view>
                   </view>
               </view>
               <view class="clearfix">
                   <view class="zg_formxlv">
-                        <input class="weui-input"  bindinput="bindKeyInput1" placeholder="姓名" placeholder-style="color:#333;"/>
-                        <view class="zg_formxlvts">
-                           您的手机号输入有误！
+                        <input class="weui-input" bindfocus="bindKeyInput1"  bindinput="bindKeyInput1" placeholder="姓名" placeholder-style="color:#333;"  bindblur="inputBlur1"/>
+                        <view class="zg_formxlvts {{inputValue1_1==1?'show':'hide'}}">
+                           姓名长度应在2-10之间，中文字符！
                         </view>
                   </view>
               </view>
               <view class="clearfix">
                   <view class="zg_formxlv clearfix">
-                        <input class="weui-input"  bindinput="bindKeyInput2" placeholder="手机号" placeholder-style="color:#333;"/>
-                        <button class='codeBtn'>{{yzm}}</button>
-                        <view class="zg_formxlvts">
-                           您的手机号输入有误！
+                        <input class="weui-input"  bindfocus="bindKeyInput2" bindinput="bindKeyInput2" placeholder="手机号" placeholder-style="color:#333;"  bindblur="inputBlur2" style="width:60%"/>
+                        <button class='codeBtn' bindtap='getVerificationCode' disabled="{{disabled}}">{{yzm}}</button>
+                        <view class="zg_formxlvts {{inputValue2_1==1?'show':'hide'}}">
+                           请输入正确的手机号！
                         </view>
                   </view>
               </view>
               <view class="clearfix">
                   <view class="zg_formxlv">
-                        <input class="weui-input" bindinput="bindKeyInput3" placeholder="验证码" placeholder-style="color:#333;"/>
+                        <input class="weui-input" bindfocus="bindKeyInput3" bindinput="bindKeyInput3" placeholder="验证码" placeholder-style="color:#333;"/>
                   </view>
               </view>
             </view>
             <view>
-              <button class="zg_cx">查询</button>
+              <text class="dryingbtnid">{{dryingbtnid}}</text>
+              <button class="zg_cx" bindtap="getsearch1">立即查询</button>
             </view>
         </view>
+     </view>
+     <view class="zg_sm clearfix">
+        <view class="zg_smfl fl">
+         *说明：
+        </view>
+        <view  class="zg_smfr fl">
+          晒分成绩及排名是根据晒分人提供的成绩进行排名,而晒分成绩或许并非真实，因此排名结果仅供参考。 
+        </view>        
      </view>
      <view class="zg_navbottom clearfix">
         <view class="zg_navbottomv1 on">晒分数</view>
@@ -160,8 +211,8 @@
         <view class="zg_pmtc1">
             <view class="zg_pmtc1tit">不用重复晒分哦</view>
             <text class="zg_pmtc1p">您的手机号已在其他入口完成晒分，\n可点击“查排名”直接查看结果！</text>
-            <view class="zg_pmtc1pm">查排名</view>             
-            <view class="zg_pmtcclose" bindtap="tchide"><image  src="https://www.offcn.com/zg/gwy_xcx/zg_bg5.png" mode="aspectFill">  
+            <view class="zg_pmtc1pm" bindtap="searhpmtz">查排名</view>             
+            <view class="zg_pmtcclose" bindtap="tchide"><image  src="https://hd.offcn.com/2017gksf/public/static/2020gksf/images/zg_bg5.png" mode="aspectFill">  
     </image></view>
         </view>
      </view>

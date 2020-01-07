@@ -1,15 +1,21 @@
 /* pages/old_user/old_user.wxss */
 
+.page-section-spacing{
+  box-sizing: border-box;
+  width: 702rpx;margin: 0 auto;height: 640rpx;
+}
+.page-section-spacing>swiper{height: 640rpx;}
 
-.zg_searchpm{background:#f5f9fc url(https://www.offcn.com/zg/gwy_xcx/zg_bg20.jpg) no-repeat center top;width: 100%;background-size: 100% 773rpx;padding-bottom: 154rpx}
+
+.zg_searchpm{background:#f5f9fc url(https://hd.offcn.com/2017gksf/public/static/2020gksf/images/zg_bg20.jpg) no-repeat center top;width: 100%;background-size: 100% 773rpx;padding-bottom: 154rpx}
 .zg_morexx{padding-top: 44rpx;text-align: center;}
 .zg_morexximg{width: 93rpx!important;height: 93rpx!important;border-radius: 50%;border: 5rpx solid #7a6cfa}
 .userinfo-nickname{text-align: center;display: block;font:26rpx/30rpx "Microsoft yahei";color: #fff;margin-top: 13rpx;}
 .zg_formxlv{border-width: 1rpx;border-color: rgb(231, 231, 231);border-style: solid;border-radius: 40rpx;width: 527rpx; height: 83rpx;margin: 30rpx auto 0;padding-left: 32rpx;position: relative}
-.zg_formxlv input{width: 60%;height: 100%;line-height: 83rpx;
+.zg_formxlv input{width: 100%;height: 100%;line-height: 83rpx;
  font-size: 26rpx; font-family: "Microsoft yahei"; color: #fff;}
-.codeBtn{position: absolute;right: 0;top:0;height: 83rpx;font:28rpx/83rpx "Microsoft yahei";color: #bcb5fc;width: 200rpx!important;padding: 0;border-radius: 40rpx;background: none;z-index: 2}
-.zg_formxlvts{background:url(https://www.offcn.com/zg/gwy_xcx/zg_bg21.png) no-repeat center top;width: 527rpx;height: 72rpx;position: absolute;left: 0;top:-72rpx;font:28rpx/66rpx "Microsoft yahei";color: #333;padding-left: 32rpx;background-size: 100% 100%;display: none}
+.codeBtn{position: absolute;right: 0;top:0;height: 83rpx;font:28rpx/83rpx "Microsoft yahei";color: #bcb5fc;width: 200rpx!important;padding: 0;border-radius: 36rpx;background: none;z-index: 2;background: #fff}
+.zg_formxlvts{background:url(https://hd.offcn.com/2017gksf/public/static/2020gksf/images/zg_bg21.png) no-repeat center top;width: 527rpx;height: 72rpx;position: absolute;left: 0;top:-72rpx;font:28rpx/66rpx "Microsoft yahei";color: #333;padding-left: 32rpx;background-size: 100% 100%;}
 .zg_searchpmformcx{
   border-radius: 44rpx;
   background-image: -moz-linear-gradient( 180deg, rgb(251,155,117) 0%, rgb(249,92,90) 53%);
@@ -55,14 +61,14 @@
   width: 20.9%;
 }
 .th{
-  font:26rpx/80rpx "Microsoft yahei";
+  font:bold 26rpx/80rpx "Microsoft yahei";
   color: #4a79e6;
   border-bottom: 1rpx solid #4a79e6;
 }
 .td{
   font:26rpx/80rpx "Microsoft yahei";
   color: #333333;
-  border-bottom: 1rpx dashed #c3c6c7;
+  border-bottom: 1rpx dashed #c3c6c7;float: left
 }
 .table .tr:last-child .td{border-bottom: none}
 
@@ -71,7 +77,7 @@
 .zg_pmtc1tit{font:34rpx/38rpx "Microsoft yahei";color: #333333;text-align: center;padding-top: 66rpx;}
 .zg_pmtc1p{font:26rpx/44rpx "Microsoft yahei";color: #666;text-align: center;padding-top:29rpx;display: block}
 .zg_pmtc1pm{
-   background:url(https://www.offcn.com/zg/gwy_xcx/zg_bg6.jpg) no-repeat center top;background-size: 342rpx 112rpx;
+   background:url(https://hd.offcn.com/2017gksf/public/static/2020gksf/images/zg_bg6.jpg) no-repeat center top;background-size: 342rpx 112rpx;
    width: 342rpx;
    height: 112rpx;
    font:32rpx/112rpx "Microsoft yahei";
@@ -81,8 +87,15 @@
 }
 .zg_pmtcclose{width: 64rpx;height: 64rpx;position: absolute;left: 50%;margin-left: -32rpx;bottom:-104rpx;}
 .zg_pmtcclose image{width: 64rpx;height: 64rpx;}
-
-
+.zg_searchpmpe{
+  width: 640rpx;
+  margin: 0 auto;
+  font:24rpx/28rpx "Microsoft yahei";
+  color: #333;
+  padding-top: 40rpx;
+  text-align: center;
+}
+.zg_searchpmpe text{font-weight: bold;color: red;}
 
 
 

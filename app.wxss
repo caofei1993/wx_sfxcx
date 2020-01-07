@@ -8,13 +8,13 @@
   box-sizing: border-box;
   background:#f5f9fc;
 } 
-
-
+page{background:#f5f9fc}
+button{outline: none!important;border:none}
 .show{
-display: block;
+display: block!important;
 }
 .hide{ 
-display: none;
+display: none!important;
 }
 .fl { float: left }
 .fr { float: right }
@@ -37,7 +37,7 @@ display: none;
 .zg_navbottom view{  
   flex-grow: 1;
   text-align: center;
-  font:24rpx/28rpx "";
+  font:24rpx/28rpx "Microsoft yahei";
   color: #bbbbbb;
   padding-top: 63rpx;
   height: 35rpx;

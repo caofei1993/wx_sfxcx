@@ -2,28 +2,28 @@
 <view class="container">
      <view class="zg_searchpm">
         <view class="zg_morexx">
-            <block>
-              <image src="https://www.offcn.com/zg/gwy_xcx/zg_bg9.png" class="zg_morexximg"></image>
+            <view class='{{show==0?"show":"hide"}}'>
+              <image src="https://hd.offcn.com/2017gksf/public/static/2020gksf/images/zg_bg9.png" class="zg_morexximg"></image>
               <text class="userinfo-nickname">中公学员</text>
-            </block>
-            <!-- <block>
-              <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-              <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-            </block> -->
+            </view>
+            <view class='{{show==1?"show":"hide"}}'>
+              <image class="zg_morexximg" src="{{avatarurl}}"></image>
+              <text class="userinfo-nickname">{{nickname}}</text>
+            </view>
         </view>
         <view class="zg_searchpmform">
            <view class="zg_formxlv clearfix">
-              <input bindinput="bindKeyInput2" placeholder="手机号" placeholder-style="color:#fff;"/>
-              <button class='codeBtn'>{{yzm}}</button>
-              <view class="zg_formxlvts">
-                  您的手机号输入有误！
+              <input bindinput="bindKeyInput2" placeholder="手机号" placeholder-style="color:#fff;" bindblur="inputBlur2"  style="width:60%;" bindfocus="bindKeyInput2"/>
+              <button class='codeBtn' bindtap="getVerificationCode" disabled="{{disabled}}">{{yzm}}</button>
+              <view class="zg_formxlvts {{inputValue2_1==1?'show':'hide'}}">
+                  请输入正确的手机号！
               </view>
            </view>
            <view class="zg_formxlv">
               <input bindinput="bindKeyInput3" placeholder="验证码" placeholder-style="color:#fff;"/>
            </view>
            <view>
-              <button class="zg_searchpmformcx">立即查询</button>
+              <button class="zg_searchpmformcx" bindtap="getsearch_old1">立即查询</button>
             </view>
         </view>
         <view class="zg_searchpmtab">
@@ -34,21 +34,28 @@
                 <view class="th th3">分数</view>
                 <view class="th th4">分差</view>
               </view>
-                <view class="tr" wx:for="{{8}}">
-                  <view class="td td1">1</view>
-                  <view class="td td2">44343524423</view>
-                  <view class="td td3">130</view>
-                  <view class="td td4">0</view>
+                <view class="tr">
+                  <view class="page-section page-section-spacing swiper">
+                    <swiper
+                      indicator-dots="{{false}}" autoplay="{{true}}" circular="{{true}}" vertical="{{true}}"
+                      interval="{{interval}}" duration="{{duration}}" previous-margin="{{previousMargin}}px" next-margin="{{nextMargin}}px" display-multiple-items="{{tiao}}">
+                      <block wx:for="{{userlist}}" wx-for-item="item">
+                        <swiper-item class="clearfix">
+                          <view class="td td1">{{item.num}}</view>
+                          <view class="td td2">{{item.zwnum}}</view>
+                          <view class="td td3">{{item.allscore}}</view>
+                          <view class="td td4">{{item.cha}}</view>
+                        </swiper-item>
+                      </block>
+                    </swiper>
+                  </view>                  
                 </view>
             </view>
         </view>
+        <view class="zg_searchpmpe">
+           目前共<text>{{total}}</text>人晒分
+        </view>
      </view>
-
-
-
-
-
-
      <view class="zg_navbottom clearfix">
         <view class="zg_navbottomv1" bindtap="lookfs">晒分数</view>
         <view class="zg_navbottomv2 on">查排名</view>
@@ -58,8 +65,8 @@
         <view class="zg_pmtc1">
             <view class="zg_pmtc1tit">后台查不到您的分数</view>
             <text class="zg_pmtc1p">您的手机号需要先完成晒分，才能看\n到对应的排名及分差哦！</text>
-            <view class="zg_pmtc1pm">查排名</view>             
-            <view class="zg_pmtcclose" bindtap="tchide"><image  src="https://www.offcn.com/zg/gwy_xcx/zg_bg5.png" mode="aspectFill">  
+            <view class="zg_pmtc1pm" bindtap="lookfs">晒分数</view>             
+            <view class="zg_pmtcclose" bindtap="tchide"><image  src="https://hd.offcn.com/2017gksf/public/static/2020gksf/images/zg_bg5.png" mode="aspectFill">  
     </image></view>
         </view>
      </view> 

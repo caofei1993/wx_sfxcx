@@ -1,17 +1,17 @@
 //app.js
 App({
+ 
+  onLoad: function () {
+    
+  },
+
   onLaunch: function () {
     // 展示本地存储能力
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
     wx.setStorageSync('logs', logs)
-
-    // 登录
-    wx.login({
-      success: res => {
-        // 发送 res.code 到后台换取 openId, sessionKey, unionId
-      }
-    })
+    
+    
     // 获取用户信息
     wx.getSetting({
       success: res => {
@@ -34,7 +34,50 @@ App({
     })
   },
   globalData: {
-    userInfo: null
-  }
+    userInfo: null,
+    avatarUrl:null,
+    nickName:null
+  },
+ 
+  getuser:function(){
+    // 登录
+    wx.login({
+      success: res => {
+        // 发送 res.code 到后台换取 openId, sessionKey, unionId        
+        console.log(res.code)
+        if (res.code) {
+          //发起网络请求
+          wx.request({
+            url: 'https://hd.offcn.com/2017gksf/index.php/home/index19/fromwx',
+            data: {
+              code: res.code
+            },
+            success: function (res) {
+              wx.setStorageSync('openid', res.data.openid);
+              if (res.data.status == 1) {
 
+              } else if (res.data.status == 2) {
+                var phone = res.data.phone;
+                var openid = res.data.openid;
+                var userInfo = res.data.userinfo;
+                var html = res.data.html;
+                console.log(phone)
+                console.log(openid)
+                console.log(userInfo)
+                console.log(html)
+                wx.redirectTo({
+                  url: "../gksfpm/gksfpm?phone=" + phone + "&userInfo=" + userInfo + '&html=' + JSON.stringify(html)//跳转详情页
+                  //  url: "../gksfpm/gksfpm?phone=" + phone
+                })
+              } else {
+                console.log(openid为空)
+              }
+            }
+          })
+        } else {
+          console.log('登录失败！' + res.errMsg)
+        }
+      }
+    })
+  }
 })

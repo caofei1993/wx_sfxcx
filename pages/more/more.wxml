@@ -1,33 +1,26 @@
 <!--pages/more/more.wxml-->
-<!-- <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo" class="normal_view"> 获取头像昵称</button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
-  </view> -->
 <view class="container">
   <view class="zg_more">
     <view class="zg_morexx">
-        <block>
-          <image src="https://www.offcn.com/zg/gwy_xcx/zg_bg9.png" class="zg_morexximg"></image>
-          <text class="userinfo-nickname">中公学员</text>
-        </block>
-        <!-- <block>
-          <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-          <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-        </block> -->
+        <view class='{{show==0?"show":"hide"}}'>
+              <image src="https://hd.offcn.com/2017gksf/public/static/2020gksf/images/zg_bg9.png" class="zg_morexximg"></image>
+              <text class="userinfo-nickname">中公学员</text>
+            </view>
+            <view class='{{show==1?"show":"hide"}}'>
+              <image class="zg_morexximg" src="{{avatarurl}}"></image>
+              <text class="userinfo-nickname">{{nickname}}</text>
+            </view>
     </view>  
-    <view class="zg_moresf">
+    <view class='zg_moresf {{show1==0?"show":"hide"}}' bindtap="lookfs">
         请先晒分
     </view>
-    <view class="zg_morepm clearfix">
+    <view class='zg_morepm clearfix {{show1==1?"show":"hide"}}'>
         <view class="zg_morepmfl">
-            <view class="zg_morepmtit">2</view>
+            <view class="zg_morepmtit">{{num}}</view>
             <view class="zg_morepmp">当前排名</view>
         </view>
         <view class="zg_morepmfr">
-            <view class="zg_morepmtit">15</view>
+            <view class="zg_morepmtit">{{total}}</view>
             <view class="zg_morepmp">本岗位晒分人数</view>
         </view>
     </view>
@@ -36,21 +29,231 @@
           <view><button open-type='share'>炫耀一下</button></view>
         </view>
         <view class="zg_morev1vi2">
-          <view><button open-type='contact'>课程咨询</button></view>
+          <view><navigator 
+    target="miniProgram" 
+    open-type="navigate" 
+    app-id="wx34b0738d0eef5f78" 
+    path="pages/forms/publish?token=9cl4Yy" 
+    extra-data="{{extraData}}"
+    version="release" 
+    bindsuccess="toMiniProgramSuccess">课程咨询</navigator></view>
         </view>
-        <view class="zg_morev1vi3">
-          <view>考前加油包</view>
+
+        <view class="zg_morev1vi3 {{lq_show==0?'show':'hide'}}">
+          <view><navigator 
+    target="miniProgram" 
+    open-type="navigate" 
+    app-id="wx3dec2f3a28471026" 
+    path="pages/index/index" 
+    extra-data="{{extraData}}"
+    version="release" 
+    bindsuccess="toMiniProgramSuccess">考前加油包</navigator></view>
+        </view>
+<view class="zg_morev1vi3 {{lq_show==1?'show':'hide'}}">
+              <view><navigator 
+          target="miniProgram" 
+          open-type="navigate" 
+          app-id="wx3dec2f3a28471026" 
+          path="pages/index/index?source=sharelock&minicodeid=28991" 
+          extra-data="{{extraData}}"
+          version="release" 
+          bindsuccess="toMiniProgramSuccess">考前加油包</navigator></view>
+          </view>
+        <view class="zg_morev1vi3 {{lq_show==2?'show':'hide'}}">
+              <view><navigator 
+              target="miniProgram" 
+              open-type="navigate" 
+              app-id="wx3dec2f3a28471026" 
+              path="pages/index/index?source=sharelock&minicodeid=28991" 
+              extra-data="{{extraData}}"
+              version="release" 
+              bindsuccess="toMiniProgramSuccess">考前加油包</navigator></view>
+              </view>
+        <view class="zg_morev1vi3 {{lq_show==3?'show':'hide'}}">
+              <view><navigator 
+          target="miniProgram" 
+          open-type="navigate" 
+          app-id="wx3dec2f3a28471026" 
+          path="pages/index/index?source=sharelock&minicodeid=28992" 
+          extra-data="{{extraData}}"
+          version="release" 
+          bindsuccess="toMiniProgramSuccess">考前加油包</navigator></view>
+          </view>
+        <view class="zg_morev1vi3 {{lq_show==4?'show':'hide'}}">
+              <view><navigator 
+              target="miniProgram" 
+              open-type="navigate" 
+              app-id="wx3dec2f3a28471026" 
+              path="pages/index/index?source=sharelock&minicodeid=28993" 
+              extra-data="{{extraData}}"
+              version="release" 
+              bindsuccess="toMiniProgramSuccess">考前加油包</navigator></view>
+              </view>
+        <view class="zg_morev1vi3 {{lq_show==5?'show':'hide'}}">
+              <view><navigator 
+          target="miniProgram" 
+          open-type="navigate" 
+          app-id="wx3dec2f3a28471026" 
+          path="pages/index/index?source=sharelock&minicodeid=28994" 
+          extra-data="{{extraData}}"
+          version="release" 
+          bindsuccess="toMiniProgramSuccess">考前加油包</navigator></view>
+          </view>
+        <view class="zg_morev1vi3 {{lq_show==6?'show':'hide'}}">
+              <view><navigator 
+              target="miniProgram" 
+              open-type="navigate" 
+              app-id="wx3dec2f3a28471026" 
+              path="pages/index/index?source=sharelock&minicodeid=28995" 
+              extra-data="{{extraData}}"
+              version="release" 
+              bindsuccess="toMiniProgramSuccess">考前加油包</navigator></view>
+              </view>
+        <view class="zg_morev1vi3 {{lq_show==7?'show':'hide'}}">
+              <view><navigator 
+          target="miniProgram" 
+          open-type="navigate" 
+          app-id="wx3dec2f3a28471026" 
+          path="pages/index/index?source=sharelock&minicodeid=28996" 
+          extra-data="{{extraData}}"
+          version="release" 
+          bindsuccess="toMiniProgramSuccess">考前加油包</navigator></view>
+          </view>
+        <view class="zg_morev1vi3 {{lq_show==8?'show':'hide'}}">
+              <view><navigator 
+              target="miniProgram" 
+              open-type="navigate" 
+              app-id="wx3dec2f3a28471026" 
+              path="pages/index/index?source=sharelock&minicodeid=28997" 
+              extra-data="{{extraData}}"
+              version="release" 
+              bindsuccess="toMiniProgramSuccess">考前加油包</navigator></view>
+              </view>
+        <view class="zg_morev1vi3 {{lq_show==9?'show':'hide'}}">
+              <view><navigator 
+          target="miniProgram" 
+          open-type="navigate" 
+          app-id="wx3dec2f3a28471026" 
+          path="pages/index/index?source=sharelock&minicodeid=28998" 
+          extra-data="{{extraData}}"
+          version="release" 
+          bindsuccess="toMiniProgramSuccess">考前加油包</navigator></view>
+          </view>
+        <view class="zg_morev1vi3 {{lq_show==10?'show':'hide'}}">
+              <view><navigator 
+              target="miniProgram" 
+              open-type="navigate" 
+              app-id="wx3dec2f3a28471026" 
+              path="pages/index/index?source=sharelock&minicodeid=28999" 
+              extra-data="{{extraData}}"
+              version="release" 
+              bindsuccess="toMiniProgramSuccess">考前加油包</navigator></view>
+              </view>
+        <view class="zg_morev1vi3 {{lq_show==11?'show':'hide'}}">
+              <view><navigator 
+          target="miniProgram" 
+          open-type="navigate" 
+          app-id="wx3dec2f3a28471026" 
+          path="pages/index/index?source=sharelock&minicodeid=29000" 
+          extra-data="{{extraData}}"
+          version="release" 
+          bindsuccess="toMiniProgramSuccess">考前加油包</navigator></view>
+          </view>
+        <view class="zg_morev1vi3 {{lq_show==12?'show':'hide'}}">
+              <view><navigator 
+              target="miniProgram" 
+              open-type="navigate" 
+              app-id="wx3dec2f3a28471026" 
+              path="pages/index/index?source=sharelock&minicodeid=29001" 
+              extra-data="{{extraData}}"
+              version="release" 
+              bindsuccess="toMiniProgramSuccess">考前加油包</navigator></view>
+              </view>
+        <view class="zg_morev1vi3 {{lq_show==13?'show':'hide'}}">
+              <view><navigator 
+          target="miniProgram" 
+          open-type="navigate" 
+          app-id="wx3dec2f3a28471026" 
+          path="pages/index/index?source=sharelock&minicodeid=29002" 
+          extra-data="{{extraData}}"
+          version="release" 
+          bindsuccess="toMiniProgramSuccess">考前加油包</navigator></view>
+          </view>
+        <view class="zg_morev1vi3 {{lq_show==14?'show':'hide'}}">
+              <view><navigator 
+              target="miniProgram" 
+              open-type="navigate" 
+              app-id="wx3dec2f3a28471026" 
+              path="pages/index/index?source=sharelock&minicodeid=29003" 
+              extra-data="{{extraData}}"
+              version="release" 
+              bindsuccess="toMiniProgramSuccess">考前加油包</navigator></view>
+              </view>
+        <view class="zg_morev1vi3 {{lq_show==15?'show':'hide'}}">
+              <view><navigator 
+          target="miniProgram" 
+          open-type="navigate" 
+          app-id="wx3dec2f3a28471026" 
+          path="pages/index/index?source=sharelock&minicodeid=29004" 
+          extra-data="{{extraData}}"
+          version="release" 
+          bindsuccess="toMiniProgramSuccess">考前加油包</navigator></view>
+          </view>
+        <view class="zg_morev1vi3 {{lq_show==16?'show':'hide'}}">
+              <view><navigator 
+              target="miniProgram" 
+              open-type="navigate" 
+              app-id="wx3dec2f3a28471026" 
+              path="pages/index/index?source=sharelock&minicodeid=29004" 
+              extra-data="{{extraData}}"
+              version="release" 
+              bindsuccess="toMiniProgramSuccess">考前加油包</navigator></view>
+              </view>
+        <view class="zg_morev1vi3 {{lq_show==17?'show':'hide'}}">
+              <view><navigator 
+          target="miniProgram" 
+          open-type="navigate" 
+          app-id="wx3dec2f3a28471026" 
+          path="pages/index/index?source=sharelock&minicodeid=29004" 
+          extra-data="{{extraData}}"
+          version="release" 
+          bindsuccess="toMiniProgramSuccess">考前加油包</navigator></view>
+          </view>
+        <view class="zg_morev1vi3 {{lq_show==18?'show':'hide'}}">
+              <view><navigator 
+              target="miniProgram" 
+              open-type="navigate" 
+              app-id="wx3dec2f3a28471026" 
+              path="pages/index/index?source=sharelock&minicodeid=29004" 
+              extra-data="{{extraData}}"
+              version="release" 
+              bindsuccess="toMiniProgramSuccess">考前加油包</navigator></view>
         </view>
         <view class="zg_morev1vi4">
-          <view>在线面试测评</view>
+          <view><navigator 
+    target="miniProgram" 
+    open-type="navigate" 
+    app-id="wxbb649293a97fa28a" 
+    path="pages/course-detail/course-detail?courseId=3146" 
+    extra-data="{{extraData}}"
+    version="release" 
+    bindsuccess="toMiniProgramSuccess">在线面试测评</navigator></view>
         </view>
         <view class="zg_morev1vi5">
-          <view>19课堂直播</view>
+          <view><navigator 
+    target="miniProgram" 
+    open-type="navigate" 
+    app-id="wx9bcafde87fc4431c" 
+    path="page/myindex/index" 
+    extra-data="{{extraData}}"
+    version="release" 
+    bindsuccess="toMiniProgramSuccess">19课堂直播</navigator></view>
         </view>
     </view>
   </view>
   <view class="zg_navbottom clearfix">
-          <view class="zg_navbottomv4" bindtap="lookkq">看考情</view>
+          <view class='zg_navbottomv1 {{show2==0?"show":"hide"}}' bindtap="lookfs">晒分数</view>
+          <view class='zg_navbottomv4 {{show2==1?"show":"hide"}}' bindtap="lookkq">看考情</view>
           <view class="zg_navbottomv2" bindtap="searhpmtz">查排名</view>
           <view class="zg_navbottomv3 on">更多</view>
   </view> 

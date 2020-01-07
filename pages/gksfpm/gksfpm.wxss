@@ -3,11 +3,11 @@
 
 .zg_gksfpm{background:#f5f9fc;padding-top: 30rpx;padding-bottom: 140rpx;width: 100%}
 .zg_gksfpmv1{border-radius: 20rpx;background-color: rgb(255, 255, 255);width: 646rpx;margin: 0 auto;padding: 37rpx 22rpx 30rpx;}
-.zg_gksfpmv1tit text{font:bold 30rpx/34rpx "";color: #333333;background:url(https://www.offcn.com/zg/gwy_xcx/zg_bg16.jpg) no-repeat left bottom;background-size: 212rpx 14rpx;}
-.zg_gksfpmv11{font:30rpx/60rpx "Microsoft yahei";color: #555555;}
+.zg_gksfpmv1tit text{font:bold 30rpx/34rpx "";color: #333333;background:url(https://hd.offcn.com/2017gksf/public/static/2020gksf/images/zg_bg16.jpg) no-repeat left bottom;background-size: 212rpx 14rpx;}
+.zg_gksfpmv11{font:30rpx/60rpx "Microsoft yahei";color: #555555;height: 60rpx;overflow: hidden;}
 .zg_gksfpmv11 text{font-weight: bold;color: #333;}
 .zg_gksfpmbmmc{margin-top: 25rpx;}
-.zg_gksfpmbmmczy{border-radius: 10px;width: 529rpx;height: 93rpx;margin: 15rpx auto 0;background:#f9f9fb url(https://www.offcn.com/zg/gwy_xcx/zg_bg17.png) no-repeat 25rpx 20rpx;background-size: 23rpx 23rpx;padding: 12rpx 50rpx 0 62rpx;font:22rpx/40rpx "Microsoft yahei";color: #888888;}
+.zg_gksfpmbmmczy{border-radius: 10px;width: 529rpx;height: 93rpx;margin: 15rpx auto 0;background:#f9f9fb url(https://hd.offcn.com/2017gksf/public/static/2020gksf/images/zg_bg17.png) no-repeat 25rpx 20rpx;background-size: 23rpx 23rpx;padding: 12rpx 50rpx 0 62rpx;font:22rpx/40rpx "Microsoft yahei";color: #888888;}
 
 .zg_gksfpmv2{border-radius: 20rpx;background-color: rgb(255, 255, 255);width: 646rpx;margin: 20rpx auto 0;padding: 37rpx 22rpx 50rpx;}
 .zg_gksfpmv2vi1{padding-top: 53rpx;padding-left: 136rpx;}

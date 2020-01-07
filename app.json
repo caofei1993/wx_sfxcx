@@ -1,23 +1,32 @@
 {
   "pages": [
-    "pages/pmjg/pmjg",
+    
     "pages/index/index",
-    
-    "pages/more/more",   
-    
     "pages/old_user/old_user",
-    "pages/gksfpm/gksfpm",     
+    "pages/gksfpm/gksfpm",
+    
+    "pages/more/more",
+    
+      
+      
+    "pages/pmjg/pmjg",        
+    
+       
     "pages/logs/logs"    
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "公务员考试",
+    "navigationBarTitleText": "国考晒分查排名",
     "navigationBarTextStyle": "black"
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json",
   "navigateToMiniProgramAppIdList": [
-    "wx3dec2f3a28471026"
+    "wx3dec2f3a28471026",
+    "wxbb649293a97fa28a",
+    "wx34b0738d0eef5f78",
+    "wx9bcafde87fc4431c"
+    
   ]
 }
